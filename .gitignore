@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+
+# React Native
+.expo/
+android/app/build/
+android/.gradle/
+android/app/release.keystore
+ios/build/
+ios/Pods/
+
+# Testing
+coverage/
+
+# Misc
+.DS_Store
+*.log
