@@ -97,7 +97,7 @@ export function subscribeToRemoteTaskChanges(userId: string, onChange: () => voi
       'postgres_changes',
       { event: '*', schema: 'public', table: 'tasks', filter: `user_id=eq.${userId}` },
       async (payload) => {
-        const row = payload.new as any;
+        const row = payload.new as RemoteTaskRow;
         if (!row) return;
         await upsertLocalTask({
           id: row.client_id ?? row.id,
