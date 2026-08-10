@@ -1,5 +1,5 @@
 import { getDBConnection } from './sqlite';
-import { Task } from '../types';
+import { Task, Priority, SyncStatus } from '../types';
 
 interface TaskRow {
   id: string;
