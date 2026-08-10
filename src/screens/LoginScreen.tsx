@@ -14,8 +14,8 @@ export default function LoginScreen() {
     try {
       await signInWithEmail(email, password);
       // Navigation updates automatically via the onAuthStateChange listener in App.tsx
-    } catch (e: any) {
-      setError(e.message ?? 'Sign-in failed');
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Sign-in failed');
     } finally {
       setLoading(false);
     }
