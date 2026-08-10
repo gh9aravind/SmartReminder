@@ -8,10 +8,10 @@ interface TaskRow {
   title: string;
   description: string | null;
   due_date: string | null;
-  priority: string;
+  priority: Priority;
   is_completed: number;
   is_deleted: number;
-  sync_status: string;
+  sync_status: SyncStatus;
   created_at: string;
   updated_at: string;
 }
