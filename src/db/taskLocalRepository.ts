@@ -1,8 +1,23 @@
 import { getDBConnection } from './sqlite';
 import { Task } from '../types';
 
+interface TaskRow {
+  id: string;
+  remote_id: string | null;
+  user_id: string;
+  title: string;
+  description: string | null;
+  due_date: string | null;
+  priority: string;
+  is_completed: number;
+  is_deleted: number;
+  sync_status: string;
+  created_at: string;
+  updated_at: string;
+}
+
 /** Maps a raw SQLite row into the app-wide Task shape. */
-function rowToTask(row: any): Task {
+function rowToTask(row: TaskRow): Task {
   return {
     id: row.id,
     remoteId: row.remote_id,
