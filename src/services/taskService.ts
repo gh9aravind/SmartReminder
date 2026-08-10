@@ -71,6 +71,20 @@ async function triggerSyncIfOnline() {
   }
 }
 
+interface RemoteTaskRow {
+  id: string;
+  client_id: string | null;
+  user_id: string;
+  title: string;
+  description: string | null;
+  due_date: string | null;
+  priority: Priority;
+  is_completed: boolean;
+  is_deleted: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 /**
  * Subscribes to Postgres changes on `tasks` for the current user via
  * Supabase Realtime, merging remote inserts/updates into the local DB
