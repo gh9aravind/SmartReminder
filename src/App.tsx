@@ -32,7 +32,7 @@ export default function App() {
     if (!user) return;
     const unsubscribeConnectivity = watchConnectivityAndSync(user.id);
     return unsubscribeConnectivity;
-  }, [user?.id]);
+  }, [user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!ready || user === undefined) {
     return (

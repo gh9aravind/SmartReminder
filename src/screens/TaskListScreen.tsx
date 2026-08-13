@@ -15,7 +15,7 @@ export default function TaskListScreen({ navigation }: Props) {
 
   useEffect(() => {
     loadTasks(CURRENT_USER_ID);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const renderItem = ({ item }: { item: Task }) => (
     <View style={styles.row}>
