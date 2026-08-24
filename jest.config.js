@@ -1,5 +1,5 @@
 module.exports = {
-  preset: 'react-native',
+  preset: '@react-native/jest-preset',
   setupFilesAfterEnv: ['./jest.setup.js'],
   transformIgnorePatterns: [
     'node_modules/(?!(react-native|@react-native|@react-navigation|@notifee|@supabase)/)',
