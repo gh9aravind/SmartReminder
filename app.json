@@ -1,4 +1,7 @@
 {
   "name": "SmartReminder",
-  "displayName": "Smart Reminder"
+  "displayName": "Smart Reminder",
+  "android": {
+    "packageName": "com.smartreminder"
+  }
 }
