@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
+    "@react-native-community/cli": "^20.2.0",
     "@react-native/eslint-config": "^0.75.4",
     "@react-native/jest-preset": "^0.87.0",
     "@react-native/metro-config": "^0.75.4",
