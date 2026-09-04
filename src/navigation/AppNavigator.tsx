@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
 import TaskListScreen from '../screens/TaskListScreen';
 import TaskFormScreen from '../screens/TaskFormScreen';
@@ -12,7 +12,7 @@ export type RootStackParamList = {
   TaskForm: { task?: Task } | undefined;
 };
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createStackNavigator<RootStackParamList>();
 
 interface Props {
   isAuthenticated: boolean;
